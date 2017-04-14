@@ -28,7 +28,7 @@
 STRING_PARAM_FLAG(model, "", "Name of model file (training or recognition)");
 STRING_PARAM_FLAG(eval_listfile, "",
                   "File listing sample files in lstmf training format.");
-INT_PARAM_FLAG(max_image_MB, 2000, "Max memory to use for images.");
+INT_PARAM_FLAG(max_image_MB, 8000, "Max memory to use for images.");
 
 int main(int argc, char **argv) {
   ParseArguments(&argc, &argv);
