@@ -231,7 +231,7 @@ void WeightMatrix::SumOuterTransposed(const TransposedArray& u,
   // v is missing the last element in dim1.
   ASSERT_HOST(v.dim1() == num_inputs);
 #ifdef _OPENMP
-#pragma omp parallel for num_threads(4) if (in_parallel)
+#pragma omp parallel for num_threads(omp_get_num_procs()) if (in_parallel)
 #endif
   for (int i = 0; i < num_outputs; ++i) {
     double* dwi = dw_[i];
