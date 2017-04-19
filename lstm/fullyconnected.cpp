@@ -28,7 +28,7 @@
 #include "networkscratch.h"
 
 // Number of threads to use for parallel calculation of Forward and Backward.
-const int kNumThreads = 4;
+const int kNumThreads = omp_get_num_procs();
 
 namespace tesseract {
 
